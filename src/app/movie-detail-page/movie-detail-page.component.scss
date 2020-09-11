@@ -1,0 +1,41 @@
+.movie-wrapper {
+  .movie {
+    margin-top: 30px;
+    .content {
+      .note {
+        margin-bottom: 30px;
+        color: #848484;
+      }
+      .movie-name {
+        margin-bottom: 20px;
+        .name {
+          font-size: 30px;
+          font-weight: 550;
+          display: block;
+          color: #000;
+        }
+      }
+      .movie-details {
+        display: flex;
+        .img-block {
+          max-width: 300px;
+          min-width: 300px;
+          img {
+            width: 100%;
+          }
+        }
+        .text-block {
+          margin-left: 20px;
+          >div {
+            label {
+              font-weight: bold;
+            }
+          }
+          .desc {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

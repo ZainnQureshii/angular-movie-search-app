@@ -1,0 +1,39 @@
+<div *ngIf="isMovieFound" class="movie-wrapper">
+  <div class="go-back">
+    <a [routerLink]="['/movie-list']" class="btn btn-primary">Go Back</a>
+  </div>
+  <hr>
+  <div class="movie">
+    <div class="content">
+      <div class="note"><i>* You can click on the movie name to search about the movie on google.</i></div>
+      <div class="movie-name">
+        <a class="name" [href]="'https://www.google.com/search?q='+movie.name" target="_blank">{{ movie.name }}</a>
+        <div class="pg"><i>({{ movie.mpaaRating.type }}: {{ movie.mpaaRating.label !== '' ? movie.mpaaRating.label : 'Unknown PG Rating' }})</i></div>
+      </div>
+      <div class="movie-details">
+        <div class="img-block">
+          <img [src]="movie.imgPath" alt="movie-img">
+        </div>
+        <div class="text-block">
+          <div class="h3">Details</div>
+          <div class="genre"><label>Genre:</label> {{ movie.genre }}</div>
+          <div class="language"><label>language:</label> {{ movie.language }}</div>
+          <div class="duration"><label>Duration:</label> {{ movie.duration }} minutes</div>
+          <div class="rating"><label>User Rating:</label> {{ movie.userRating }}</div>
+          <div class="desc">
+            <h4>Synopsis</h4>
+            <p>{{ movie.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="!isMovieFound" class="movie-wrapper">
+  <div class="go-back">
+    <a [routerLink]="['/movie-list']" class="btn btn-primary">Go Back</a>
+  </div>
+  <hr>
+  <div class="alert alert-danger">Invalid Url</div>
+</div>

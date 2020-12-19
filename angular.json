@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "movie-mania"
+    }
+  },
+  "defaultProject": "movie-mania",
+  "cli": {
+    "analytics": false
+  }
 }
